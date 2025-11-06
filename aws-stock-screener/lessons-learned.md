@@ -1,5 +1,9 @@
 # Lessons Learned & Insights
 
+## Project Context
+
+This project was built as a **technical learning exercise** to demonstrate production-grade AWS development. The stock screening logic provided real-world requirements that drove comprehensive implementation of serverless patterns, security best practices, and cost optimization strategies.
+
 ## What Went Well
 
 ### Architecture Decisions
@@ -89,12 +93,12 @@
 
 **Serverless Sweet Spot**: Serverless excels for intermittent, predictable workloads but requires different thinking about state management and performance optimization.
 
-### Financial Technology Domain
-**Data Quality is Critical**: Financial applications require much more robust error handling than typical web applications. Bad data can lead to bad investment decisions.
+### Domain-Specific Development
+**Data Quality Requirements**: Working with financial data taught the importance of robust error handling for missing/delayed data.
 
-**Regulatory Considerations**: Even for personal use, implementing audit trails and proper security practices is essential in financial applications.
+**Performance Expectations**: Real-time query responses (<2 seconds) required different optimization than batch processing.
 
-**Real-Time Requirements**: Users expect immediate responses for portfolio queries, requiring different optimization strategies than batch processing workloads.
+**Audit Trails**: Comprehensive logging practices valuable for debugging and understanding system behavior over time.
 
 ### Production Operations
 **Monitoring is Not Optional**: Comprehensive monitoring isn't overhead - it's essential for understanding both system health and business performance.
@@ -112,71 +116,23 @@
 
 ## Future Improvements
 
-### Short-term (3-6 months)
-**Enhanced Error Handling**:
-- Implement circuit breaker pattern for external API failures
-- Add dead letter queues for systematic failure analysis
-- Create automated retry logic for transient failures
+**Placeholder**: This section will be updated with realistic, achievable enhancements as the project evolves.
 
-**Improved Monitoring**:
-- Add X-Ray distributed tracing for better visibility
-- Implement custom CloudWatch dashboards for business metrics
-- Create automated cost anomaly detection
-
-**User Experience**:
-- Add configurable alert thresholds for personalized notifications
-- Implement historical performance comparison features
-- Create data export functionality for external analysis
-
-### Medium-term (6-12 months)
-**Advanced Analytics**:
-- Integrate machine learning for improved stock selection
-- Implement sector rotation analysis and alerts
-- Add correlation analysis between positions
-
-**Scalability Enhancements**:
-- Implement multi-region deployment for global users
-- Add support for international markets (Europe, Asia)
-- Integrate additional data sources for enhanced analysis
-
-**Automation Improvements**:
-- Create automated trading integration (with proper safeguards)
-- Implement dynamic position sizing based on volatility
-- Add automated rebalancing recommendations
-
-### Long-term (12+ months)
-**Platform Evolution**:
-- Build comprehensive web dashboard with advanced visualizations
-- Create mobile app for enhanced user experience
-- Implement multi-user support with proper access controls
-
-**Advanced Features**:
-- Integrate options pricing and volatility analysis
-- Add crypto and commodity screening capabilities
-- Implement portfolio optimization algorithms
-
-**Business Intelligence**:
-- Create comprehensive backtesting platform
-- Add strategy performance attribution analysis
-- Implement risk factor decomposition and analysis
+Potential areas to explore:
+- X-Ray distributed tracing for improved debugging
+- Dead letter queues for failed event handling
+- CloudWatch dashboards for visual monitoring
+- Architecture diagrams and additional documentation
 
 ## Technical Growth Areas
 
-### Areas to Develop
-**Container Technologies**: Learning EKS and containerized deployments for applications requiring more complex runtime environments.
+**Next Learning Goals**:
+- Container orchestration (ECS/EKS) for more complex applications
+- Advanced networking (VPC, multi-region architectures)
+- CI/CD pipelines (CodePipeline, GitHub Actions)
+- Additional data services (DynamoDB, RDS, Aurora)
 
-**Data Engineering**: Exploring EMR and Glue for large-scale data processing as data volumes grow.
-
-**Machine Learning**: Integrating SageMaker for predictive analytics and enhanced stock selection algorithms.
-
-**Advanced Networking**: Understanding VPC, Transit Gateway, and multi-region architectures for enterprise-scale applications.
-
-### Certification Goals
-**AWS Solutions Architect Professional**: Deep dive into advanced AWS architectural patterns and multi-service integration.
-
-**AWS DevOps Engineer**: Advanced CI/CD, monitoring, and operational excellence practices.
-
-**Domain-Specific**: Financial risk management or quantitative analysis certifications to enhance business domain expertise.
+**Certification Target**: AWS Solutions Architect Associate → Professional
 
 ## Advice for Similar Projects
 
